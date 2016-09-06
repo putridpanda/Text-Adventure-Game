@@ -1,4 +1,3 @@
-__author__ = 'Phillip Johnson'
 
 _world = {}
 starting_position = (0, 0)
