@@ -31,3 +31,11 @@ class Ogre(Enemy):
 class AidsMonkey(Enemy):
     def __init__(self):
         super().__init__(name="Aids Monkey", hp=50, damage=12)
+
+class DonaldTrump(Enemy):
+    def __init__(self):
+        super().__init__(name="Donald Trump", hp=15, damage=5)
+
+class Feminazi(Enemy):
+    def __init__(self):
+        super().__init__(name="Feminazi", hp=33, damage=1)

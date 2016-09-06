@@ -6,4 +6,3 @@ EmptyCavePath	EmptyCavePath	EmptyCavePath	EmptyCavePath
 EmptyCavePath	EmptyCavePath	EmptyCavePath	GiantSpiderRoom
 EmptyCavePath	DildoRoom	EmptyCavePath	EmptyCavePath
 EmptyCavePath	EmptyCavePath	EmptyCavePath	StartingRoom
-

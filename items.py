@@ -48,6 +48,13 @@ class Dildo(Weapon) :
                          description="Brown boy's personal dildo! Great for sticking into holes",
                          value=69,
                          damage=696969)
+class Hair(Weapon):
+    def __init__(self):
+        super().__init__(name ="Trump's Hair",
+                         description="It's a bird... no it's a plane... wait it's just Donald Trump's hair",
+                         value=0,
+                         damage=0)
+        
 
 
 class Gold(Item):
