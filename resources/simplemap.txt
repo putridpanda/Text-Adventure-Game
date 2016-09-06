@@ -3,6 +3,6 @@ EmptyCavePath	EmptyCavePath	EmptyCavePath	EmptyCavePath
 EmptyCavePath	EmptyCavePath	EmptyCavePath	EmptyCavePath
 EmptyCavePath	EmptyCavePath	EmptyCavePath	FindDaggerRoom
 EmptyCavePath	EmptyCavePath	EmptyCavePath	EmptyCavePath
-EmptyCavePath	EmptyCavePath	EmptyCavePath	GiantSpiderRoom
+EmptyCavePath	EmptyCavePath	EmptyCavePath	FindDaggerRoom
 EmptyCavePath	EmptyCavePath	EmptyCavePath	EmptyCavePath
 EmptyCavePath	EmptyCavePath	EmptyCavePath	StartingRoom
