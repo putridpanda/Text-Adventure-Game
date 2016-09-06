@@ -27,3 +27,7 @@ class GiantSpider(Enemy):
 class Ogre(Enemy):
     def __init__(self):
         super().__init__(name="Ogre", hp=30, damage=15)
+
+class AidsMonkey(Enemy):
+    def __init__(self):
+        super().__init__(name"Aids Monkey", hp=50, damage=12

@@ -3,7 +3,7 @@ A simple text adventure designed as a learning experience for new programmers.
 """
 import world
 from player import Player
-import sys
+import sys, pdb
 
 
 def play():
@@ -11,7 +11,6 @@ def play():
     player = Player()
     room = world.tile_exists(player.location_x, player.location_y)
     print(room.intro_text())
-    print(sys.version)
     while player.is_alive() and not player.victory:
         room = world.tile_exists(player.location_x, player.location_y)
         room.modify_player(player)
