@@ -3,12 +3,7 @@ EmptyCavePath	EmptyCavePath	EmptyCavePath	EmptyCavePath
 EmptyCavePath	EmptyCavePath	EmptyCavePath	EmptyCavePath
 EmptyCavePath	EmptyCavePath	EmptyCavePath	FindDaggerRoom
 EmptyCavePath	EmptyCavePath	EmptyCavePath	EmptyCavePath
-<<<<<<< HEAD
 EmptyCavePath	EmptyCavePath	EmptyCavePath	GiantSpiderRoom
 EmptyCavePath	DildoRoom	EmptyCavePath	EmptyCavePath
 EmptyCavePath	EmptyCavePath	EmptyCavePath	StartingRoom
-=======
-EmptyCavePath	EmptyCavePath	EmptyCavePath	FindDaggerRoom
-EmptyCavePath	EmptyCavePath	EmptyCavePath	EmptyCavePath
-EmptyCavePath	EmptyCavePath	EmptyCavePath	StartingRoom
->>>>>>> refs/remotes/abhig1997/master
+

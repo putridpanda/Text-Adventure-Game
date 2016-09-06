@@ -30,4 +30,4 @@ class Ogre(Enemy):
 
 class AidsMonkey(Enemy):
     def __init__(self):
-        super().__init__(name"Aids Monkey", hp=50, damage=12
+        super().__init__(name="Aids Monkey", hp=50, damage=12)
