@@ -21,7 +21,7 @@ class Weapon(Item):
         return "{}\n=====\n{}\nValue: {}\nDamage: {}".format(self.name, self.description, self.value, self.damage)
 
 
-class Rock(Weapon):
+class Rock(Weapon): #Commenting for brown boy
     def __init__(self):
         super().__init__(name="Rock",
                          description="Just hope you don't run into any monsters while holding this, what the fuck are you going to do with a rock?",
