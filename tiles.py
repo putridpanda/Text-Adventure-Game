@@ -99,6 +99,9 @@ class LootRoom(MapTile):
             newamt = self.item.amt
             the_player.inventory[0].amt += newamt
             the_player.inventory[0].value = the_player.inventory[0].amt
+
+
+            
         elif self.item.name == "Dagger":
             has_dagger = False
             for member in the_player.inventory:
@@ -109,6 +112,21 @@ class LootRoom(MapTile):
                 the_player.inventory.append(self.item)
             else:
                 print("This is not the exit you are looking for. Move along.")
+
+
+        elif self.item.name == "Sword":
+            has_sword = False
+            for member in the_player.inventory:
+                if member.name == "Sword":
+                    has_sword = True
+            if not has_sword:
+                print("A long, sharp sword lies against the wall. It seems to gleam in the darkness.\n")
+                the_player.inventory.append(self.item)
+            else:
+                print("This is not the exit you are looking for. Move along.")
+
+
+                
         else:
             the_player.inventory.append(self.item) #adds the item to the end of the inventory array
 
