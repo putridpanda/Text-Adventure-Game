@@ -1,6 +1,3 @@
-"""
-A simple text adventure designed as a learning experience for new programmers.
-"""
 import world
 from player import Player
 import sys, pdb
