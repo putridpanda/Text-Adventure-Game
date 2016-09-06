@@ -21,7 +21,7 @@ class Weapon(Item):
         return "{}\n=====\n{}\nValue: {}\nDamage: {}".format(self.name, self.description, self.value, self.damage)
 
 
-class Rock(Weapon): #Commenting for brown boy
+class Rock(Weapon): 
     def __init__(self):
         super().__init__(name="Rock",
                          description="Just hope you don't run into any monsters while holding this, what the fuck are you going to do with a rock?",
@@ -42,6 +42,12 @@ class Sword(Weapon):
                          description="A long steel blade, suitable for slashing and stabbing.",
                          value=15,
                          damage=15)
+class Dildo(Weapon) :
+    def __init__(self):
+        super().__init__(name ="Mighty Dildo",
+                         description="Brown boy's personal dildo! Great for sticking into holes",
+                         value=69,
+                         damage=696969)
 
 
 class Gold(Item):

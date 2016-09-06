@@ -134,6 +134,16 @@ class FindGoldRoom(LootRoom):
         return """
         Someone dropped some gold!!! You pick it up.
         """
+class DildoRoom(LootRoom):
+    def __init__(self, x, y):
+        super().__init__(x, y, items.Dildo())
+
+    def intro_text(self):
+        return """
+        You hear whimpering coming from a dark corner...
+        From the shadows emerges a brown boy.
+        He pulls a giant dildo from his ass and hands it to you.
+        """
 
 
 class EnemyRoom(MapTile):
