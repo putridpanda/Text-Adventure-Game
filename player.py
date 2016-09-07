@@ -1,5 +1,6 @@
-import random
+from random import randint
 import items, world
+import pdb
 
 
 class Player():
@@ -38,17 +39,34 @@ class Player():
     def move_west(self):
         self.move(dx=-1, dy=0)
 
+    def calculate_crit(self, bestweapon):
+        prob = randint(1,100)       #generate a random number
+        # Each weapon should have a different critical hit ratio
+        # If Rock gets a crit, it can double damage. But doubling damage of Mighty Dildo is OP
+        if prob <= 20 and bestweapon.name == "Rock":
+            return bestweapon.damage * 2
+        elif prob <= 15 and bestweapon.name == "Dagger":
+            return bestweapon.damage * 1.8
+        elif prob <= 10 and bestweapon.name == "Sword":
+            return bestweapon.damage * 1.5
+        elif prob <= 5 and bestweapon.name == "Mighty Dildo":
+            return bestweapon.damage * 1.2
+        else:
+            return bestweapon.damage
+
     def attack(self, enemy):
         best_weapon = None
         max_dmg = 0
         for i in self.inventory:
-            if isinstance(i, items.Weapon):
+            if isinstance(i, items.Weapon): #finding the strongest weapon to use
                 if i.damage > max_dmg:
                     max_dmg = i.damage
                     best_weapon = i
-
+        dmg_dealt = self.calculate_crit(best_weapon)
         print("You use {} against {}!".format(best_weapon.name, enemy.name))
-        enemy.hp -= best_weapon.damage
+        if dmg_dealt != best_weapon.damage:
+            print("CRITICAL HIT!".format(best_weapon.name))
+        enemy.hp -= dmg_dealt
         if not enemy.is_alive():
             print("You killed {}!".format(enemy.name))
         else:

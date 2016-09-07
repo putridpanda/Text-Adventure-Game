@@ -161,6 +161,7 @@ class FindGoldRoom(LootRoom):
         return """
         Someone dropped some gold!!! You pick it up.
         """
+    
 class DildoRoom(LootRoom):
     def __init__(self, x, y):
         super().__init__(x, y, items.Dildo())
