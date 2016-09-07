@@ -179,7 +179,7 @@ class DildoRoom(LootRoom):
 
 
 
-class EnemyRoom(MapTile):
+class EnemyRoom(MapTile): #controls the effects of all the enemy rooms
     def __init__(self, x, y, enemy):
         self.enemy = enemy
         super().__init__(x, y)
