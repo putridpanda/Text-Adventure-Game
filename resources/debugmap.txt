@@ -4,5 +4,5 @@ EmptyCavePath	EmptyCavePath	EmptyCavePath	GiantSpiderRoom
 EmptyCavePath	EmptyCavePath	EmptyCavePath	GiantSpiderRoom
 EmptyCavePath	EmptyCavePath	EmptyCavePath	GiantSpiderRoom
 EmptyCavePath	EmptyCavePath	EmptyCavePath	GiantSpiderRoom
-EmptyCavePath	EmptyCavePath	DildoRoom	EmptyCavePath
+TrumpRoom	FeminaziRoom	DildoRoom	EmptyCavePath
 EmptyCavePath	EmptyCavePath	EmptyCavePath	StartingRoom
