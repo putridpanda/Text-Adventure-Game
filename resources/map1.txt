@@ -1,0 +1,10 @@
+DildoRoom		SnakePitRoom		
+EmptyCavePath			OgreRoom	EmptyCavePath
+EmptyCavePath	GiantSpiderRoom			EmptyCavePath
+FindDaggerRoom	LeaveCaveRoom	GiantSpiderRoom		FindGoldRoom
+EmptyCavePath	FindGoldRoom		EmptyCavePath	
+EmptyCavePath			EmptyCavePath	
+EmptyCavePath	EmptyCavePath	EmptyCavePath	FindGoldRoom	EmptyCavePath
+			FindDaggerRoom	EmptyCavePath
+	TrumpRoom	EmptyCavePath	StartingRoom	EmptyCavePath
+SnakePitRoom	FeminaziRoom			
