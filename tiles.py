@@ -61,7 +61,7 @@ class StartingRoom(MapTile):
 
 class EmptyCavePath(MapTile):
     def intro_text(self):
-        r = randint(0,3)
+        r = randint(0,5)
         if r == 0:
             return """
             Another unremarkable part of the cave. You must forge onwards.
@@ -94,14 +94,12 @@ class LootRoom(MapTile):
         super().__init__(x, y)
 
     def add_loot(self, the_player): #Adds the loot to the player inventory
-        #pdb.set_trace()
+        # If the player found gold, the amt should be added to the amount they already had
         if self.item.name == "Gold":
             newamt = self.item.amt
             the_player.inventory[0].amt += newamt
             the_player.inventory[0].value = the_player.inventory[0].amt
-
-
-            
+        #if the player found a dagger, check if they already have one
         elif self.item.name == "Dagger":
             has_dagger = False
             for member in the_player.inventory:
@@ -112,8 +110,6 @@ class LootRoom(MapTile):
                 the_player.inventory.append(self.item)
             else:
                 print("This is not the exit you are looking for. Move along.")
-
-
         elif self.item.name == "Sword":
             has_sword = False
             for member in the_player.inventory:
@@ -124,9 +120,17 @@ class LootRoom(MapTile):
                 the_player.inventory.append(self.item)
             else:
                 print("This is not the exit you are looking for. Move along.")
+        elif self.item.name == "Mighty Dildo":
+            has_sword = False
+            for member in the_player.inventory:
+                if member.name == "Mighty Dildo":
+                    has_sword = True
+            if not has_sword:
+                print("Whimpering comes from a dark corner.\nA brown boy appears from the shadows.\nHe pulls a dildo out of his ass and gives it you.\n")
+                the_player.inventory.append(self.item)
+            else:
+                print("The brown boy sits in the corner, massaging his butt\n")
 
-
-                
         else:
             the_player.inventory.append(self.item) #adds the item to the end of the inventory array
 
@@ -146,10 +150,7 @@ class FindSwordRoom(LootRoom):
         super().__init__(x,y,items.Sword())
 
     def intro_text(self):
-        return """
-        You find a long sword in the center of the room.
-        You're kind of OP now, so if you die, you really suck at this.
-        """
+        pass
 
 
 class FindGoldRoom(LootRoom):
@@ -167,11 +168,15 @@ class DildoRoom(LootRoom):
         super().__init__(x, y, items.Dildo())
 
     def intro_text(self):
-        return """
-        You hear whimpering coming from a dark corner...
-        From the shadows emerges a brown boy.
-        He pulls a giant dildo from his ass and hands it to you.
-        """
+        pass
+
+
+
+
+#################               ENEMY ROOMS          #################################
+
+
+
 
 
 class EnemyRoom(MapTile):
