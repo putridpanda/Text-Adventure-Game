@@ -79,7 +79,7 @@ class EmptyCavePath(MapTile):
         else:
             """
             Water drips from the ceiling, as you walk through yet another empty section of
-            this seemingly undending cave.
+            this seemingly undending cave. 
             """
 
     def modify_player(self, the_player):
@@ -217,6 +217,35 @@ class OgreRoom(EnemyRoom):
         else:
             return """
             A dead ogre reminds you of your triumph.
+            """
+
+class TrumpRoom(EnemyRoom):
+    def __init__(self, x, y):
+        super().__init__(x,y, enemies.DonaldTrump())
+
+    def intro_text(self):
+        if self.enemy.is_alive():
+            return """
+            Donald Trump jumps from behind his desk!
+            He's angry because someone stole his hair.
+            """
+        else :
+            return """
+            Trump's mouth is wide open... You contemplate slipping it in...
+            """
+
+class FeminaziRoom(EnemyRoom):
+    def __init__(self, x, y):
+        super().__init__(x,y, enemies.Feminazi())
+
+    def intro_text(self):
+        if self.enemy.is_alive():
+            return """
+            An angry feminist comes running at you!
+            """
+        else :
+            return """
+            This is what happens when bitches have equal rights
             """
 
 
