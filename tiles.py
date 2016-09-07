@@ -193,7 +193,7 @@ class EnemyRoom(MapTile): #controls the effects of all the enemy rooms
             elif self.enemy.name == "Ogre" and prob <= 5:
                 dmg *= 2
             elif self.enemy.name == "Aids Monkey" and prob <= 8:
-                dmg *= 2.2
+                dmg *= 2
             elif self.enemy.name == "Donald Trump" and prob <= 15:
                 dmg *= 3
             elif self.enemy.name == "Feminazi" and prob <= 5:
@@ -254,6 +254,20 @@ class TrumpRoom(EnemyRoom):
         else :
             return """
             Trump's mouth is wide open... You contemplate slipping it in...
+            """
+
+class MonkeyRoom(EnemyRoom):
+    def __init__(self,x,y):
+        super().__init__(x,y,enemies.AidsMonkey())
+
+    def intro_text(self):
+        if self.enemy.is_alive():
+            return """
+            The AIDS Monkey swings down from the cave, scattering used condoms over the dirt floor!
+            """
+        else:
+            return """
+            The corpse of the monkey lays in the center...RIP in pieces.
             """
 
 class FeminaziRoom(EnemyRoom):

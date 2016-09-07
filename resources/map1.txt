@@ -1,6 +1,6 @@
 DildoRoom		SnakePitRoom		
 EmptyCavePath			OgreRoom	EmptyCavePath
-EmptyCavePath	GiantSpiderRoom			EmptyCavePath
+MonkeyRoom	GiantSpiderRoom			EmptyCavePath
 FindDaggerRoom	LeaveCaveRoom	GiantSpiderRoom		FindGoldRoom
 EmptyCavePath	FindGoldRoom		EmptyCavePath	
 EmptyCavePath			EmptyCavePath	
