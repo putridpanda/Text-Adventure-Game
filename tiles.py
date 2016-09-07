@@ -186,8 +186,24 @@ class EnemyRoom(MapTile): #controls the effects of all the enemy rooms
 
     def modify_player(self, the_player):
         if self.enemy.is_alive():
-            the_player.hp = the_player.hp - self.enemy.damage
-            print("Enemy does {} damage. You have {} HP remaining.".format(self.enemy.damage, the_player.hp))
+            prob = randint(1,100)
+            dmg = self.enemy.damage
+            if self.enemy.name == "Giant Spider" and prob <= 20:
+                dmg *= 3
+            elif self.enemy.name == "Ogre" and prob <= 5:
+                dmg *= 2
+            elif self.enemy.name == "Aids Monkey" and prob <= 8:
+                dmg *= 2.2
+            elif self.enemy.name == "Donald Trump" and prob <= 15:
+                dmg *= 3
+            elif self.enemy.name == "Feminazi" and prob <= 5:
+                dmg *= 10
+            else:
+                pass
+            the_player.hp = the_player.hp - dmg
+            if dmg != self.enemy.damage:
+                print("ENEMY DEALT A CRITICAL HIT\n\n")
+            print("Enemy does {} damage. You have {} HP remaining.".format(dmg, the_player.hp))
 
     def available_actions(self):
         if self.enemy.is_alive():
