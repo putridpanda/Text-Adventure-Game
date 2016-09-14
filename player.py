@@ -6,7 +6,7 @@ import pdb
 class Player():
     def __init__(self):
         self.inventory = [items.Gold(15), items.Rock()]
-        self.hp = 100
+        self.hp = 100 #this is a testing comment
         self.location_x, self.location_y = world.starting_position
         self.victory = False
 
